@@ -1,6 +1,54 @@
 # Intelligent-Document-Summarization-and-Q-A-Platform
-Agentic Rag basically
 
+Recommended Project Structure (Without MCP)
+Agentic Rag basically
+```
+document-summarizer/
+│── README.md
+│── requirements.txt
+│── .env
+│── config.py
+│── main.py                 # FastAPI entrypoint
+│── run_streamlit.py        # Streamlit app launcher
+│
+├── app/
+│   ├── __init__.py
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── routes.py       # FastAPI routes (ingest, summarize, Q&A)
+│   │   └── schemas.py      # Pydantic models
+│   │
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── parser.py       # PDF/DOCX/HTML parsing
+│   │   ├── summarizer.py   # Summarization agent
+│   │   ├── entity_extractor.py # Entity extraction
+│   │   ├── qna.py          # Q&A over documents
+│   │   └── validation.py   # Cross-agent validation & rollback
+│   │
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── logger.py       # Logging setup
+│   │   └── exceptions.py   # Custom exceptions
+│   │
+│   └── tests/
+│       ├── __init__.py
+│       ├── test_parser.py
+│       ├── test_summarizer.py
+│       ├── test_entities.py
+│       ├── test_qna.py
+│       └── test_endpoints.py
+│
+├── ui/
+│   ├── __init__.py
+│   ├── app.py              # Streamlit UI (upload, summary, Q&A)
+│   └── components.py       # Reusable UI elements
+│
+└── data/
+    ├── sample_docs/        # Example PDFs, DOCX, etc.
+    └── outputs/            # Saved summaries, logs, reports
+
+```
 
 ![WhatsApp Image 2025-09-03 at 7 15 59 PM](https://github.com/user-attachments/assets/5c1966a4-1592-457f-b211-809e99d0639f)
 ![WhatsApp Image 2025-09-03 at 7 15 59 PM(1)](https://github.com/user-attachments/assets/d695b1a8-86dd-4294-b87d-9d3d07e8c29a)

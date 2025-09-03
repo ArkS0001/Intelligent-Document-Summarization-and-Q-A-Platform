@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+streamlit
+requests
+langchain
+langchain-community
+sentence-transformers
+chromadb
+pypdf
+docx2txt
+pyautogen

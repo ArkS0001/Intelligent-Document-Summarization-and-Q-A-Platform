@@ -10,7 +10,7 @@ CHROMA_DB_DIR = "data/chroma"
 LLM_CONFIG = {
     "config_list": [
         {
-            "model": "llama-3.1-8b-instant",
+            "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
             "api_key": GROQ_API_KEY,
             "base_url": "https://api.groq.com/openai/v1"
         }
